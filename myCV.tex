@@ -7,15 +7,16 @@
 
 \usepackage[tmargin=3cm,bmargin=2cm,lmargin=2.5cm,rmargin=3.5cm]{geometry}
 
-\usepackage{multicol,fontspec,color,xltxtra}
+\usepackage{multicol,fontspec,color,xltxtra,footmisc}
 \definecolor{myblue}{rgb}{0.059,0.220,0.570}
 \definecolor{tyrian}{rgb}{0.398,0.008,0.234}
 \newcommand{\mb}{\color{myblue}}
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Numbers=OldStyle,BoldFont=* Semibold]{Chaparral Pro}
+\setmainfont[Numbers=OldStyle,BoldFont=Chaparral Pro Semibold]{Chaparral Pro Regular}
 \newfontfamily\titlesfont[Scale=0.95]{Lato}
 
 \def\sectionfont{\scshape\large\mb\titlesfont\MakeUppercase}
+\renewcommand\footnotelayout{\fontspec[Numbers=OldStyle]{Chaparral Pro Caption}}
 
 \begin{document}
 \setlength{\leftmargini}{0em}
