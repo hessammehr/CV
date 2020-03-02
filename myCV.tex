@@ -1,17 +1,20 @@
-\documentclass[overlapped,line,10pt,letterpaper]{res}
+\documentclass[overlapped,line,10pt,a4paper]{res}
 \newsectionwidth{0.5cm}
 \usepackage[bookmarks, colorlinks, breaklinks, pdftitle={S. Hessam M. Mehr, CV},pdfauthor={S. Hessam M. Mehr}]{hyperref}
-\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
 
 \usepackage[tmargin=2.5cm,bmargin=2cm,lmargin=2cm,rmargin=3cm]{geometry}
 
 \usepackage{multicol,fontspec,color,footmisc,enumitem}
 \definecolor{myblue}{rgb}{0.059,0.220,0.570}
 \definecolor{tyrian}{rgb}{0.398,0.008,0.234}
+\hypersetup{linkcolor=myblue,citecolor=myblue,filecolor=black,urlcolor=myblue}
 \newcommand{\mb}{\color{myblue}}
-\newcommand{\doi}[1]{DOI: \href{https://doi.org/#1}{\addfontfeatures{Numbers=Lining} #1}}
+\newcommand{\doi}[1]{DOI: {\tt #1}}
+\newcommand{\cost}[1]{\addfontfeatures{Numbers=Lining} \textbf{#1}}
+\newcommand{\doilink}[1]{DOI: \href{https://doi.org/#1}{\tt #1}}
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont[Numbers={Proportional,OldStyle},BoldFont=Chaparral Pro Semibold]{Chaparral Pro}
+\setmonofont[Scale=MatchLowercase, Contextuals=Alternate]{Fira Code}
 \newfontfamily\titlesfont{SF Pro Text}
 
 \def\sectionfont{\scshape\large\mb\titlesfont}
@@ -28,47 +31,51 @@
 \begin{resume}
 \reversemarginpar
 \begin{ncolumn}{2}
-  Department of Chemistry
-  &
-  {\addfontfeatures{Numbers=Lining}+44 (756) 897-7309}
-   \\
-  University of Glasgow
-  &
-  \href{https://hessammehr.github.io}{https://hessammehr.github.io}
-   \\
-  {\addfontfeatures{Numbers=Lining} University Avenue}
-  &
-  \href{http://www.chem.gla.ac.uk/cronin/members/Hessam/}{http://www.chem.gla.ac.uk/cronin/members/Hessam/}
-   \\
- Glasgow, UK {\addfontfeatures{Numbers=Lining}G12 8QQ}
- &
-  \href{mailto:hessammehr@gmail.com}{hessammehr@gmail.com}
+Department of Chemistry
+&
+\href{mailto:Hessam.Mehr@glasgow.ac.uk}{\tt Hessam.Mehr@glasgow.ac.uk}
+%{\addfontfeatures{Numbers=Lining}+44 (756) 897-7309}
+ \\
+University of Glasgow
+&
+\url{https://hessammehr.github.io}
+ \\
+{\addfontfeatures{Numbers=Lining} University Avenue}
+&
+\url{http://chem.gla.ac.uk/cronin/members/Hessam/}
+\\
+Glasgow, UK {\addfontfeatures{Numbers=Lining}G12 8QQ}
+&
+\url{https://orcid.org/0000-0001-7710-3102}
 \end{ncolumn}
 
 
 
-\section{areas of research interest}
-\begin{itemize}
-\item Staged programming, compilation and reasoning on domain-specific knowledge
-\item Closed-loop chemical discovery using novel software and automation techniques
-\item Logic/probabilistic programming in the large
-\end{itemize}
+\section{research profile}
+\begin{description}
+\item[Background]
+\item Chemistry — supramolecular, synthetic/physical organic (PhD, industry, post-doc)
+\item Engineering — electrical/software (BSc, industry, post-doc)
+\item[Interests]
+\item Automated chemical discovery
+\item Probabilistic/logic techniques in chemical/biomolecular space
+\item Language, compilation, and inference applied to physical processes
+\end{description}
 
 \section{employment}
 \begin{description}
-\item [Post-doctoral research assistant] Cronin Lab, \emph{University of Glasgow}, Glasgow, UK \hspace{\fill} 2018– \\
-Developed probabilistic models for discovering new chemicals and chemical reactions; helped develop abstractions and software for universal automation of chemical synthesis
-\item [Researcher] Drug Analysis Service, \emph{Health Canada}, Burnaby, Canada \hspace\fill 2017–2018 \\ Designed and implemented a high-performance algorithm for automatic identification and quantitation of drug molecules using NMR spectroscopy
+\item [Post-doctoral Research Assistant] Cronin group, \emph{University of Glasgow}, Glasgow, UK \hspace{\fill} 2018–(2020) \\
+{\small Helped develop abstractions and software for universal digitization and robotic automation of chemical synthesis.}
+\item [Specialist] Drug Analysis Service, \emph{Health Canada}, Burnaby, Canada \hspace\fill 2017–2018 \\
+{\small Designed and implemented a high-performance algorithm in \emph{Julia} to automatically identify and measure drug molecules in mixtures using NMR spectroscopy.}
 \end{description}
 
 \section{education}
 \begin{description}
 \item [Doctor of Philosophy] Chemistry, \emph{University of British Columbia (UBC)}, Vancouver, Canada \hspace{\fill} 2011–2017 \\
-Created materials with new and unusual properties by harnessing tautomerism and electron delocalization \\
-\emph{Supervisor: Prof.\ Mark MacLachlan}
+{\small Created materials with new and unusual properties by harnessing tautomerism and electron delocalization.\\ \emph{Supervisor: Prof.\ Mark MacLachlan}}
 \item [Bachelor of Science] Electrical Engineering, \emph{Sharif University of Technology}, Tehran, Iran \hspace\fill 2005–2009 \\
-Used finite-difference time-domain methods to study light propagation in finite-sized photonic crystals \\
-\emph{Supervisor: Prof.\ Khashayar Mehrany}
+{\small Used \emph{finite-difference time-domain} methods to study light propagation in photonic crystals.\\ \emph{Supervisor: Prof.\ Khashayar Mehrany}}
 \end{description}
 
 \section{publications}
@@ -77,7 +84,7 @@ Used finite-difference time-domain methods to study light propagation in finite-
 \item[A universal approach to the digitization and automatic execution of the chemical synthesis literature]
 {\small \underline{Mehr, S. H. M.}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. \\
 \emph{Nature}, 2020 \textit{(under review)}}
-\item[Intuition-Enabled Machine Learning Beats the Competition When Joint Human-Robot Teams Perform Inorganic Chemical Experiments]{\small Duros, V; Grizou, J.; Sharma, A.; \underline{Mehr, S. H. M.}; Bubliauskas, A.; Frei, P.; Miras, H. N.; Cronin, L.\\
+\item[Intuition-Enabled Machine Learning Beats the Competition When Joint Human-Robot Teams Perform Inorganic Chemical Experiments]{\small Duros, V.; Grizou, J.; Sharma, A.; \underline{Mehr, S. H. M.}; Bubliauskas, A.; Frei, P.; Miras, H. N.; Cronin, L.\\
 \emph{J. Chem. Inf. Model.}, 2019 (\doi{10.1021/acs.jcim.9b00304})}
 \item[Catalyst: The Metaphysics of Chemical Reactivity]{\small Cronin, L.; \underline{Mehr, S. H. M.}; Granda, J. M. \\
 \emph{Chem}, \textbf{2018}, 4 (8), 1759–1761 (\doi{10.1016/j.chempr.2018.07.008})}
@@ -89,7 +96,7 @@ Used finite-difference time-domain methods to study light propagation in finite-
 \emph{Org. Biomol. Chem.}, \textbf{2017}, 15 (3), 581–583 (\doi{10.1039/C6OB02727J})}
 \item[Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization]{\small \underline{Mehr, S. H. M.}; Patrick, B. O.; MacLachlan, M. J. \\
 \emph{Org. Lett.}, \textbf{2016}, 18 (8), 1840–1843 (\doi{10.1021/acs.orglett.6b00577})}
-\item[Deuteration of Aromatic Rings Under Very Mild Conditions Through Keto-Enamine Tautomeric Amplfication]{\small \underline{Mehr, S. H. M.}; Fukuyama, K.; Bishop, S.; Lelj, F.; MacLachlan, M. J. \\
+\item[Deuteration of Aromatic Rings Under Very Mild Conditions Through Keto-Enamine Tautomeric Amplification]{\small \underline{Mehr, S. H. M.}; Fukuyama, K.; Bishop, S.; Lelj, F.; MacLachlan, M. J. \\
 \emph{J. Org. Chem}, \textbf{2015}, 80 (10), 5144–5150 (\doi{10.1021/acs.joc.5b00539})}
 \item[Novel PPV/Mesoporous Organosilica Composites: Influence of the Host Chirality on a Conjugated Polymer Guest]{\small  \underline{Mehr, S. H. M.}; Giese, M.; Qi, H.; Shopsowitz, K.; Hamad, W. Y.; MacLachlan, M. J.\\
 \emph{Langmuir}, \textbf{2013}, 29 (40), 12579–12584 (\doi{10.1021/la4024597})}
@@ -99,9 +106,11 @@ Used finite-difference time-domain methods to study light propagation in finite-
 in \emph{OPTO}, International Society For Optics And Photonics, \textbf{2010}, 76091–76091 (\doi{10.1117/12.839839})}
 \end{description}
 
-\section{grants and proposals}
-\begin{description}
-\end{description}
+\section{proposal contributions}
+\begin{itemize}
+\item Exploration of Chemical Space with Autonomous Robots for Generating Knowledge (CHEMTREK) \\ ERC Advanced Grant, 2020–2025, \cost{€ 2.5\,M}
+\item Molecular Automated Discovery of Novelty Enabled by Synthetic Systems (MADNESS) \\ DARPA Accelerated Molecular Discovery (AMD), 2019–2023, \cost{\$ 4\,M}
+\end{itemize}
 
 \section{talks and poster presentations}
 \begin{description}[style=nextline]
@@ -115,6 +124,7 @@ in \emph{OPTO}, International Society For Optics And Photonics, \textbf{2010}, 7
 
 \section{awards \& honours}
 \begin{description}
+\item[ASPIRE Challenge] NIH National Center for Advancing Translational Science, 2019
 \item[International Tuition Award] UBC, 2011–2017
 \item[ISMSC Scholarship] Competitive award for abstracts at the 10th International Symposium on Macrocyclic and Supramolecular Chemistry, Strasbourg, 2015
 \item[Arnold By Travel Award] UBC, 2015
@@ -123,7 +133,7 @@ in \emph{OPTO}, International Society For Optics And Photonics, \textbf{2010}, 7
 \item[Faculty of Science PhD Tuition Award] UBC, 2016–2017
 \end{description}
 
-\section{leadership \& service}
+\section{leadership \& public engagement}
 \begin{description}
 \item[Vice president] Chemistry Graduate Student Society (CGSS), UBC, 2013–2014
 \item[Presenter/facilitator] \emph{Chemistry Field Trips} for high school students, UBC, 2012–2016
@@ -134,28 +144,24 @@ in \emph{OPTO}, International Society For Optics And Photonics, \textbf{2010}, 7
 \begin{description}
 \item[Shared Instrument Facility (TA)] University of British Columbia (UBC), 2012–2016
 \item[Organic Chemistry] Farzanegan High School, 2005–2010
-\item[Digital Signal Processing Lab (TA)] Sharif Univ. Tech., 2009–2010
+\item[Digital Signal Processing Lab (TA)] Sharif University of Technology, 2009–2010
 \item[Chemistry for the International Chemistry Olympiad] Allameh Helli High School, Tehran, Iran, 2004–2010
 \end{description}
 
 \section{students supervised}
 \begin{description}
-\item[Hannah Depmeier] Devising methods towards multiple-formylation of phenols \hspace{\fill} 2016\, (BSc)
+\item[Hannah Depmeier] Novel methods towards multiple-formylation of phenols \hspace{\fill} 2016\, (BSc)
 \item[Mahboobeh Maghami] Tautomerism in Schiff base macrocycles \hspace{\fill} 2014–2015 \, (PhD)
 \item[Stephanie Bishop] Facile H/D exchange in salicylideneamine derivatives \hspace{\fill} 2013–2014 \, (BSc)
 \item[Marcus Farnfield]  Salicylaldimines as photodegradable crosslinkers \hspace{\fill} 2013–2014 \, (BSc)
 \item[Jason Yang]  Molecular capsules based on salicylaldimines \hspace{\fill} 2013–2014 \, (BSc)
 \end{description}
 
-\section{software}
+\section{skills}
 \begin{description}
-\item[Programming] Julia, Prolog, Python, Clojure, OCaml, C, Rust, JavaScript, \LaTeX \ (\href{https://github.com/hessammehr}{github.com/hessammehr})
-\end{description}
-
-\section{languages}
-\begin{description}
-\item[English, Farsi] Native
-\item[French, Italian] Fair
+\item[Programming] Julia, Python, Prolog, Clojure, OCaml, C, Rust, JavaScript, \LaTeX\ (\href{https://github.com/hessammehr}{\tt github.com/hessammehr})
+\item[Analytical techniques] NMR spectroscopy, MALDI-TOF mass spectrometry
+\item[Chemistry] Organic synthesis, macrocycle and supramolecule design, \emph{ab initio} computational chemistry
 \end{description}
 \end{resume}
 \end{document}
